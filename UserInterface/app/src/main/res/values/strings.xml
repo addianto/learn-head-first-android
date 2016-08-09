@@ -6,4 +6,13 @@
     <string name="message">Message</string>
     <string name="send">Send</string>
     <string name="to_hint">Enter email address</string>
+    <string name="serving_text">Thanks for choosing our awesome blend tea. How do you want it serving?</string>
+    <string name="temperature">Temperature:</string>
+    <string name="milk">Milk</string>
+    <string name="sugar">Sugar</string>
+    <string name="lemon">Lemon</string>
+    <string-array name="temperature_values">
+        <item>Hot</item>
+        <item>Cold</item>
+    </string-array>
 </resources>
