@@ -9,4 +9,9 @@ in the Head First Android book.
 to put view element at position relative to its parent `RelativeLayout`.
     - `layout_alignLeft`, `layout_below` and others to align view 
     element relative to specified view
-
+- `android:layout_alignX` properties are specific to `RelativeLayout`. 
+Similar alternative exists for `LinearLayout`, that is, 
+`android:layout_gravity`.
+- `android:gravity` is different to `android:layout_gravity`. The first one 
+relates to the **content** of the view while the latter relates to the 
+**view** itself.
