@@ -12,6 +12,8 @@ to put view element at position relative to its parent `RelativeLayout`.
 - `android:layout_alignX` properties are specific to `RelativeLayout`. 
 Similar alternative exists for `LinearLayout`, that is, 
 `android:layout_gravity`.
+    - `android:layout_gravity` can be used in view elements governed by 
+    `GridLayout`.
 - `android:gravity` is different to `android:layout_gravity`. The first one 
 relates to the **content** of the view while the latter relates to the 
 **view** itself.
