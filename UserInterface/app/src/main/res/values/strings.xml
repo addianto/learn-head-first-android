@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">User Interface</string>
+    <string name="click_me">Click me!</string>
+    <string name="new_button">Below</string>
+</resources>
