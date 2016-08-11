@@ -43,6 +43,6 @@ public class DrinkTest {
 
     @Test
     public void testToString() throws Exception {
-        assertEquals("Drink{name='Drink A'}", drinks[0].toString());
+        assertEquals("Drink A", drinks[0].toString());
     }
 }

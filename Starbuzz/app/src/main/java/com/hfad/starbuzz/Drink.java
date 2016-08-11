@@ -47,8 +47,6 @@ public class Drink {
 
     @Override
     public String toString() {
-        return "Drink{" +
-                "name='" + name + '\'' +
-                '}';
+        return name;
     }
 }
