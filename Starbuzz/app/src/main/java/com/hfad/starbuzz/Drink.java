@@ -7,12 +7,12 @@ public class Drink {
     private int imageResourceId;
 
     public static final Drink[] drinks = {
-            new Drink("Latte", "A couple of espresso shots with steamed milk", 0),
-                    // R.drawable.latte),
-            new Drink("Cappucino", "Espresso, hot milk, and a steamed milk foam", 1),
-                    // R.drawable.cappucinno),
-            new Drink("Filter", "Highest quality beans roasted and brewed fresh", 2),
-                    // R.drawable.filter)
+            new Drink("Latte", "A couple of espresso shots with steamed milk",
+                    R.drawable.latte),
+            new Drink("Cappuccino", "Espresso, hot milk, and a steamed milk foam",
+                    R.drawable.cappuccino),
+            new Drink("Filter", "Highest quality beans roasted and brewed fresh",
+                    R.drawable.filter)
     };
 
     /**
