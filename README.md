@@ -5,6 +5,11 @@ in the Head First Android book.
 
 ## Notes
 
+The following are my notes on reading and trying the exercises from the 
+book.
+
+### Chapter 5: The User Interface
+
 - Use `android:layout_alignX` (X can be `ParentTop`, `ParentRight`, etc.) 
 to put view element at position relative to its parent `RelativeLayout`.
     - `layout_alignLeft`, `layout_below` and others to align view 
@@ -18,3 +23,7 @@ Similar alternative exists for `LinearLayout`, that is,
 relates to the **content** of the view while the latter relates to the 
 **view** itself.
 - `sp` size means **scale-independent pixels** size.
+
+### Chapter 6: List Views & Adapters
+
+- 
