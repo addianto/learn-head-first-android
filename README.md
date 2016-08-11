@@ -17,4 +17,4 @@ Similar alternative exists for `LinearLayout`, that is,
 - `android:gravity` is different to `android:layout_gravity`. The first one 
 relates to the **content** of the view while the latter relates to the 
 **view** itself.
-- `sp` size means **scale-independent pixels` size.
+- `sp` size means **scale-independent pixels** size.
