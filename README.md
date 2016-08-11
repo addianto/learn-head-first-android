@@ -26,4 +26,4 @@ relates to the **content** of the view while the latter relates to the
 
 ### Chapter 6: List Views & Adapters
 
-- 
+- `ListActivity` provides a `ListView` by default.
