@@ -27,3 +27,5 @@ relates to the **content** of the view while the latter relates to the
 ### Chapter 6: List Views & Adapters
 
 - `ListActivity` provides a `ListView` by default.
+- Add a fragment to an activity using `<fragment>` if you don't need it 
+to respond changes in the user interface. Otherwise, use a `<FrameLayout>`.
