@@ -1,8 +1,10 @@
 package com.hfad.workout;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements WorkoutListFragment.WorkoutListListener {
 
@@ -14,16 +16,28 @@ public class MainActivity extends AppCompatActivity implements WorkoutListFragme
 
     @Override
     public void itemClicked(long id) {
-        WorkoutDetailFragment details = new WorkoutDetailFragment();
-        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+        // Get a reference to the frame layout that contains WorkoutDetailFragment.
+        // This will exist if the app is being run on a device with a large screen
+        View fragmentContainer = findViewById(R.id.fragment_container);
 
-        details.setWorkoutId(id);
-        tx.replace(R.id.fragment_container, details);
-        tx.addToBackStack(null);
+        if(fragmentContainer != null) {
+            WorkoutDetailFragment details = new WorkoutDetailFragment();
+            FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
 
-        // Cannot use FRAGMENT_FADE?
-        tx.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+            details.setWorkoutId(id);
+            tx.replace(R.id.fragment_container, details);
+            tx.addToBackStack(null);
 
-        tx.commit();
+            // Cannot use FRAGMENT_FADE?
+            tx.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+
+            tx.commit();
+        } else {
+            // If the frame layout isn't there, the app must be running on a device
+            // with a smaller screen
+            Intent intent = new Intent(this, DetailActivity.class);
+            intent.putExtra(DetailActivity.EXTRA_WORKOUT_ID, (int) id);
+            startActivity(intent);
+        }
     }
 }
