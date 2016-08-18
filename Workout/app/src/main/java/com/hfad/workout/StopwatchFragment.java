@@ -7,9 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class StopwatchFragment extends Fragment {
+public class StopwatchFragment extends Fragment implements View.OnClickListener {
 
     // Number of seconds displayed on the stopwatch
     private int seconds;
@@ -44,6 +45,14 @@ public class StopwatchFragment extends Fragment {
         View layout = inflater.inflate(R.layout.fragment_stopwatch, container, false);
         runTimer(layout);
 
+        // Assign click listener to the buttons
+        Button startButton = (Button) layout.findViewById(R.id.start_button);
+        startButton.setOnClickListener(this);
+        Button stopButton = (Button) layout.findViewById(R.id.stop_button);
+        stopButton.setOnClickListener(this);
+        Button resetButton = (Button) layout.findViewById(R.id.reset_button);
+        resetButton.setOnClickListener(this);
+
         return layout;
     }
 
@@ -69,15 +78,15 @@ public class StopwatchFragment extends Fragment {
         outState.putBoolean("wasRunning", wasRunning);
     }
 
-    public void onClickStart() {
+    public void onClickStart(View view) {
         running = true;
     }
 
-    public void onClickStop() {
+    public void onClickStop(View view) {
         running = false;
     }
 
-    public void onClickReset() {
+    public void onClickReset(View view) {
         running = false;
         seconds = 0;
     }
@@ -101,5 +110,24 @@ public class StopwatchFragment extends Fragment {
                 handler.postDelayed(this, 1000);
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        int viewId = view.getId();
+
+        switch(viewId) {
+            case R.id.start_button:
+                onClickStart(view);
+                break;
+            case R.id.stop_button:
+                onClickStop(view);
+                break;
+            case R.id.reset_button:
+                onClickReset(view);
+                break;
+            default:
+                break;
+        }
     }
 }
