@@ -100,6 +100,6 @@ public class StopwatchFragment extends Fragment {
 
                 handler.postDelayed(this, 1000);
             }
-        };
+        });
     }
 }
