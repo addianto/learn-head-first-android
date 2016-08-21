@@ -29,3 +29,8 @@ relates to the **content** of the view while the latter relates to the
 - `ListActivity` provides a `ListView` by default.
 - Add a fragment to an activity using `<fragment>` if you don't need it 
 to respond changes in the user interface. Otherwise, use a `<FrameLayout>`.
+
+### Chapter 9: Action Bars
+
+- Use **Back** button to navigate back to the previous activity.
+- Use **Up** button to navigate up the app's hierarchy.
