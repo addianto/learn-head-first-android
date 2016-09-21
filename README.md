@@ -34,3 +34,7 @@ to respond changes in the user interface. Otherwise, use a `<FrameLayout>`.
 
 - Use **Back** button to navigate back to the previous activity.
 - Use **Up** button to navigate up the app's hierarchy.
+- If project has a dependency on the v7 appcompat library, `showAsAction` 
+in a menu item in the resource file must be prefixed with `app:` and 
+`app` namespace must be included
+    - Otherwise, `showAsAction` must be prefixed with `android:`
