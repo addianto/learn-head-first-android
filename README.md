@@ -29,3 +29,10 @@ relates to the **content** of the view while the latter relates to the
 - `ListActivity` provides a `ListView` by default.
 - Add a fragment to an activity using `<fragment>` if you don't need it 
 to respond changes in the user interface. Otherwise, use a `<FrameLayout>`.
+
+### Chapter 9: Action Bars
+
+- If project has a dependency on the v7 appcompat library, `showAsAction` 
+in a menu item in the resource file must be prefixed with `app:` and 
+`app` namespace must be included
+    - Otherwise, `showAsAction` must be prefixed with `android:`
