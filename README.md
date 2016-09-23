@@ -51,3 +51,7 @@ if you want to create a bound service.
 - The **IntentService** class is a subclass of **Service** that is designed 
 to handle intents. You'll usually extends this class if you want to create 
 a started service.
+- When to override `onStartCommand()` or `onHandleIntent()`?
+    - Override `onHandleIntent()` if there are no needs to run codes in the 
+    main thread, i.e. the codes can be run in background thread.
+    - Otherwise, override `onStartCommand()`.
