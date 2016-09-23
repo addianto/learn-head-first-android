@@ -38,3 +38,16 @@ to respond changes in the user interface. Otherwise, use a `<FrameLayout>`.
 in a menu item in the resource file must be prefixed with `app:` and 
 `app` namespace must be included
     - Otherwise, `showAsAction` must be prefixed with `android:`
+
+### Chapter 13: Services
+
+- A **started service** can run in the background indefinitely, even when 
+the activity that started it is destroyed.
+- A **bound service** is bound to another component such as an activity. It 
+runs as long as components are bound to it.
+- The **Service** class is the base class for creating services. It provides 
+you with basic service functionality, and you will usually extend this class 
+if you want to create a bound service.
+- The **IntentService** class is a subclass of **Service** that is designed 
+to handle intents. You'll usually extends this class if you want to create 
+a started service.
