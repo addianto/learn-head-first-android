@@ -38,3 +38,7 @@ to respond changes in the user interface. Otherwise, use a `<FrameLayout>`.
 in a menu item in the resource file must be prefixed with `app:` and 
 `app` namespace must be included
     - Otherwise, `showAsAction` must be prefixed with `android:`
+
+### Chapter 12: Cursor & Asynctask
+
+- Cursors give you access to database data
