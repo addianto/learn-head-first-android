@@ -6,15 +6,6 @@ public class Drink {
     private String description;
     private int imageResourceId;
 
-    public static final Drink[] drinks = {
-            new Drink("Latte", "A couple of espresso shots with steamed milk",
-                    R.drawable.latte),
-            new Drink("Cappuccino", "Espresso, hot milk, and a steamed milk foam",
-                    R.drawable.cappuccino),
-            new Drink("Filter", "Highest quality beans roasted and brewed fresh",
-                    R.drawable.filter)
-    };
-
     /**
      * Private constructor. The object(s) will be constructed using a factory
      * method.
